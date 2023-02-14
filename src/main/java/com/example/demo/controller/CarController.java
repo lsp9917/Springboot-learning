@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.common.BaseResponse;
-import com.example.demo.common.RespGenerator;
+import com.example.demo.common.ResponseHelper;
 import com.example.demo.mapper.CarMapper;
 import com.example.demo.pojo.Car;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +27,8 @@ public class CarController {
     private CarMapper CarMapper;
 
     @GetMapping("/getCar")
-    public BaseResponse<List<Car>> getCarList() {
-        List<Car> carList = new ArrayList<>();
-        carList = CarMapper.getCarList();
-        return RespGenerator.success(carList);
+    public ResponseHelper getCarList() {
+        List<Car> carList = CarMapper.getCarList();
+        return ResponseHelper.success(carList);
     }
 }

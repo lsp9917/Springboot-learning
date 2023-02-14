@@ -15,8 +15,8 @@ mybatis:
   #设置配置的日志输出信息(看sql)
   configuration:
     #关闭日志
-    #log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     #开启mybatis驼峰式命名规则自动转换
     map-underscore-to-camel-case: true
 
