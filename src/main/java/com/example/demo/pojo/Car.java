@@ -2,6 +2,8 @@ package com.example.demo.pojo;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @author : [laishaopeng_zz]
  * @version : [v1.0]
@@ -16,7 +18,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Car {
+public class Car implements Serializable {
     private Long id;
     private String carName;
     private String brand;
