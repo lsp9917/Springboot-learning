@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ly?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
+mybatis:
+  #实现Mapper接口与xml文件的绑定
+  mapper-locations: classpath:mapper/*Mapper.xml
+  #注册实体类
+  type-aliases-package: com.example.demo.pojo
+  #设置配置的日志输出信息(看sql)
+  configuration:
+    #关闭日志
+    #log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
+
+
